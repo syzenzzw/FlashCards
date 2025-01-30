@@ -1,14 +1,17 @@
 import axios from "axios";
 import { useQuery } from 'react-query'
+import '../styles/flashmenu.css'
+import CardModel from "./card";
+import { useState } from "react";
 
 function FlashMenu(){ 
+    const [selectedCardId, setSelectedCardId] = useState(null);
 
     const {data, isLoading, error} = useQuery('getAllCards', () => {
         return axios
         .get('https://localhost:7091/api/v1/GetAllCards?pageIndex=1&pageSize=20')
         .then((response) => response.data)
     },{
-        retry: 5
     })
 
     if(error){
@@ -23,17 +26,28 @@ function FlashMenu(){
         </div>
     }
 
+
+
     return(
-        <div>
-            <h1>Flashs: </h1>
+        <div className="divtaskbar">
+        <div className="taskbar" >
+            <h1 className="titleFlash">Flashs: </h1>
             {data.cards.map(card => (
                 <div className="lateralmenu" key={card.id}>
-                    {card.content.split(' ').shift()}
-                    <small>{card.matter}</small>
+                    <h1 className="contenth1">{card.content.split(' ').shift()}</h1>
+                    <small 
+                    className="matter"
+                    style={{
+                        color: card.matter === 'Matemática' ? '#FFA20C' : 'inherit'
+                    }}
+                    >{card.matter}
+                    </small>
                 </div>
             ))}
         </div>
-    )
+
+        </div>
+    );
 }
 
 export default FlashMenu;

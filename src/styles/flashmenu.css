@@ -1,0 +1,56 @@
+.divtaskbar{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+.taskbar {
+    background-color: #D9D9D9;
+    padding: 1rem;
+    width: 193px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 421px; 
+    margin-top: 8px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.matter{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%);
+    font-family: 'Inter';
+    font-size: 12px;
+    color: inherit;
+}
+
+.contenth1{
+    font-family: 'Inter';
+    color: white;
+    font-size: 15px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.titleFlash {
+    font-family: 'Inter';
+    color: 000000;
+    font-size: 24px;
+    display: flex;
+}
+
+.lateralmenu{
+    background-color: #888888;
+    position: relative;
+    margin-left: -20px;
+    height: 35px;
+    width: 215px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    cursor: pointer;
+}
