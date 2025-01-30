@@ -11,7 +11,6 @@ function ComponentTestReactQuery(){
     },{
         retry: 5,
         refetchOnWindowFocus: true,
-
     });
 
     if (isLoading) {    
