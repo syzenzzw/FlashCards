@@ -1,12 +1,9 @@
-import axios from "axios";
+import axios from "axios"
 import { useQuery } from 'react-query'
 import '../styles/flashmenu.css'
-import CardModel from "./card";
-import { useState } from "react";
+import CardModel from "./cardmodel"
 
 function FlashMenu(){ 
-    const [selectedCardId, setSelectedCardId] = useState(null);
-
     const {data, isLoading, error} = useQuery('getAllCards', () => {
         return axios
         .get('https://localhost:7091/api/v1/GetAllCards?pageIndex=1&pageSize=20')
@@ -33,7 +30,7 @@ function FlashMenu(){
         <div className="taskbar" >
             <h1 className="titleFlash">Flashs: </h1>
             {data.cards.map(card => (
-                <div className="lateralmenu" key={card.id}>
+                <div onClick={() => CardModel(card.id)} className="lateralmenu" key={card.id}>
                     <h1 className="contenth1">{card.content.split(' ').shift()}</h1>
                     <small 
                     className="matter"
@@ -45,7 +42,6 @@ function FlashMenu(){
                 </div>
             ))}
         </div>
-
         </div>
     );
 }
