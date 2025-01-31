@@ -1,0 +1,19 @@
+.containerCard {
+    background-color: #d9d9d9;
+    width: 938px;
+    height: 580px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -430px;
+    border-radius: 30px;
+}
+
+.Isrevised{
+    color: #FF0000;
+}
+
+.polegar{
+    cursor: pointer;
+}
+

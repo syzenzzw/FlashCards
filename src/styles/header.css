@@ -4,13 +4,16 @@
 }
 
 .header {
-    background-color: #D9D9D9;
-    height: 120px;
+    height: 80px;
+    backdrop-filter: blur(10px);
+    max-width: 100%;
+    border: 0cap;
+    border-style: solid;
 }
 
 .title{
     font-family: 'Inter';font-size: 20px;
     font-style: italic;
-    font-size: 36px;
+    font-size: 20px;
 }
 

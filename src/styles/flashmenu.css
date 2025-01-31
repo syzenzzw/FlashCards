@@ -16,6 +16,9 @@
     margin-top: 8px;
     overflow-y: auto;
     overflow-x: hidden; 
+    border-end-end-radius: 25px;
+    border-top-right-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .matter{
