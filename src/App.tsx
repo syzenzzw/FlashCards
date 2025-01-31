@@ -1,15 +1,17 @@
 import FlashMenu from './components/flashsmenu'
 import HeaderPage from './components/header'
-import CardModel from './components/cardmodel'
+import './styles/app.css'
 
 function App() {
 
- 
   return (
     <div>
         <HeaderPage />
         <FlashMenu />
-        <CardModel />
+
+        <footer className='footermain'>
+
+        </footer>
     </div>
   )
 }
