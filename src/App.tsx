@@ -1,5 +1,6 @@
 import FlashMenu from './components/flashsmenu'
 import HeaderPage from './components/header'
+import CreateCard from './components/createcard'
 import './styles/app.css'
 
 function App() {
@@ -8,10 +9,11 @@ function App() {
     <div>
         <HeaderPage />
         <FlashMenu />
+        <CreateCard />
 
-        <footer className='footermain'>
+      <footer className="footermain">
 
-        </footer>
+      </footer>
     </div>
   )
 }
