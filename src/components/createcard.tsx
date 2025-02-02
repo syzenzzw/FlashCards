@@ -1,26 +1,37 @@
 import '../styles/createcard.css'
 import { useState } from 'react';
-import axios from "axios"
-import { useQuery } from 'react-query'
+
 
 function CreateCard(){
-    const [postProps, setPostProps] = useState('');
+    const [cardUrgency, setCardUrgency] = useState('')
+    const [cardMatter, setCardMatter] = useState('');
+    const [cardContent, setCardContent] = useState('');
     const modal = document.getElementById('modal');
 
-    //const {data, isLoading, error} = useQuery('getAllCards', () => {
-       // return axios
-       // .get('https://localhost:7091/api/v1/GetAllCards?pageIndex=1&pageSize=20')
-       // .then((response) => response.data)
-    //},{
-    //})
+    async function CreateCardFunc() {
+        console.log({cardContent, cardMatter, cardUrgency})
 
-    const {data, isLoading, error} = useQuery('getAllMatters', () => {
-        return axios
-        .get('https://localhost:7091/api/v1/GetAllMatters')
-        .then((response) => response.data)
-    },{
+        try {
+            const responsePost = await fetch(`https://localhost:7091/api/v1/CreateCard`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'content': cardContent,
+                    'matter': cardMatter,
+                    'urgency': cardUrgency
+                })
+            })
 
-    });
+            if (responsePost.status == 201) {
+                console.log('foi')
+            }
+        } catch (e) {
+            console.log('erro: ', e);
+        }
+    }
+
 
     function openModal(){
         const modal1 = document.getElementById('modal');
@@ -39,8 +50,10 @@ function CreateCard(){
          window.onclick = function(event){
         if (event.target == modal) {
             const modalll = document.getElementById('modal');
-            modalll.style.display = 'none';
-            setPostProps('');
+            
+            if (modalll) {
+                modalll.style.display = 'none';
+            }  
         }   
     }
     return (
@@ -52,12 +65,24 @@ function CreateCard(){
                 <div className="contentModal">
                     <span onClick={closeModal} className="close">&times;</span>
                     <p>para teste</p>
-                    <textarea onChange={(e) => setPostProps(e.target.value)} className='txtArea' id="txtArea" placeholder='...'>
-                        {postProps}
-                    </textarea>
+                    <textarea onChange={(e) => setCardContent(e.target.value)} className='txtArea' id="txtArea" placeholder='...'>
+                    </textarea> 
 
-                    
+                    <br /><br />
 
+                    <label htmlFor="inptMatter">matéria: </label>
+                    <input type="text" 
+                    className='inptMatter'
+                    onChange={(e) => setCardMatter(e.target.value)}/>
+                   
+                    <label htmlFor="slc">Urgência: </label>
+
+                    <select onChange={(e) => setCardUrgency(e.target.value)} id="slc">
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                    <button onClick={CreateCardFunc} type='button'>Criar Flash Card</button>
                 </div>
             </div>
         </div>

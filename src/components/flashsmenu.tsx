@@ -87,7 +87,7 @@ function FlashMenu(){
 
                             <br /><br />
 
-                            <small className="createdOnCard">Criado em: {cards.formattedCreatedOn}</small>
+                            <small className="createdOnCard">Criado em: {cards.createdOn}</small>
 
                             <br /><br />
                             
