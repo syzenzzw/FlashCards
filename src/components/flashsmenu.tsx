@@ -6,7 +6,17 @@ import '../styles/card.css'
 import polegar from './imgs/polegar.png'
 
 function FlashMenu(){ 
-    const [cards, setCards] = useState(null);
+
+    interface Card {
+        id: number;
+        content: string;
+        matter: string;
+        createdOn: string;
+        urgency: string;
+        revised: string;
+    }
+
+    const [cards, setCards] = useState<Card | null>(null);
 
     const {data, isLoading, error} = useQuery('getAllCards', () => {
         return axios
@@ -57,7 +67,7 @@ function FlashMenu(){
         <div className="divtaskbar">
         <div className="taskbar" >
             <h1 className="titleFlash">Flashs: </h1>
-            {data.cards.map(card => (
+            {data?.cards.map((card: Card) => (
                 <div onClick={() => responseGetById(card.id)} className="lateralmenu" key={card.id}>
                     <h1 className="contenth1">{card.content.split(' ').shift()}</h1>
                     <small 
