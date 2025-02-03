@@ -10,10 +10,6 @@ function App() {
         <HeaderPage />
         <FlashMenu />
         <CreateCard />
-
-      <footer className="footermain">
-
-      </footer>
     </div>
   )
 }

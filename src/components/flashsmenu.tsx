@@ -65,8 +65,12 @@ function FlashMenu(){
 
     return(
         <div className="divtaskbar">
+        <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        </head>
+
         <div className="taskbar" >
-            <h1 className="titleFlash">Flashs: </h1>
+            <h1 className="titleFlash">My FlashCards: </h1>
             {data?.cards.map((card: Card) => (
                 <div onClick={() => responseGetById(card.id)} className="lateralmenu" key={card.id}>
                     <h1 className="contenth1">{card.content.split(' ').shift()}</h1>
@@ -75,24 +79,18 @@ function FlashMenu(){
                     style={{
                         color: card.matter === 'Matemática' ? '#FFA20C' : 'inherit'
                     }}
-                    >{card.matter}
+                    >
+                    {card.matter}
                     </small>
                 </div>
             ))}
         </div>
             {cards && (
                 <div className="containerCard">
+                     <button className="btnDelete">
+                            Delete
+                        </button>
                        <div className="contentCard">
-                            <label htmlFor="polegar">Revisado? </label>
-
-                            <label
-                            onClick={() => changeRevised(cards.id)} 
-                            className="polegar" 
-                            id="polegar"
-                            >
-                            <img width={20} src={polegar} />
-                            </label>
-
                             <p className="content">{cards.content}</p>
 
                             <br /><br />
@@ -110,7 +108,13 @@ function FlashMenu(){
                                     color: cards.revised === 'Sim' ? '#00FF00' : 'inherit',
                                 }
                             }>Revisado: {cards.revised}</small>
-                       </div>   
+                       </div>
+
+                       <button 
+                            onClick={() => changeRevised(cards.id)} 
+                            className="btnReview">
+                                Review
+                        </button>
                 </div>
             )}
         </div>

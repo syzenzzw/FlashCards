@@ -58,8 +58,13 @@ function CreateCard(){
     }
     return (
         <div>
-            <button onClick={openModal} id='btnModal'>
-                Abrir
+
+        <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        </head>
+
+            <button className='btnModal' onClick={openModal} id='btnModal'>
+                Create a Flash-Card
             </button>
             <div id='modal' className="modal">
                 <div className="contentModal">
@@ -78,11 +83,12 @@ function CreateCard(){
                     <label htmlFor="slc">Urgência: </label>
 
                     <select onChange={(e) => setCardUrgency(e.target.value)} id="slc">
+                        <option value="Selecione">Selecione a urgência</option>
                         <option value="Alta">Alta</option>
                         <option value="Média">Média</option>
                         <option value="Baixa">Baixa</option>
                     </select>
-                    <button onClick={CreateCardFunc} type='button'>Criar Flash Card</button>
+                    <button className='btnCreate' onClick={CreateCardFunc} type='button'>Criar Flash Card</button>
                 </div>
             </div>
         </div>

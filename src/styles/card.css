@@ -1,19 +1,42 @@
 .containerCard {
-    background-color: #d9d9d9;
-    width: 938px;
-    height: 580px;
+    background-color: rgb(217, 217, 217, 0.1);
+    width: 825px;
+    height: 509px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -430px;
-    border-radius: 30px;
+    margin-top: -590px;
+    border-radius: 35px;
+    color: white;
+    font-family: 'Roboto Mobo', monospace;
+    font-weight: 400;
+    justify-content: flex-start;
+    font-size: 16px;
 }
 
-.Isrevised{
-    color: #FF0000;
-}
-
-.polegar{
+.btnReview{
     cursor: pointer;
+    color: white;
+    width: 79px;
+    height: 40px;
+    background-color: rgb(44, 44, 44, 1.0);
+    border: none;
+    border-radius: 8px;
+    margin-top: 270px;
+    position: relative;
+    margin-left: 600px;
+}
+
+.btnDelete{
+    background-color: #FF0000;
+    color: white;
+    width: 70px;
+    height: 23px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    border-radius: 8px;
+    border: none;
+    margin-left: 720px;
+    margin-top: 10px;
 }
 

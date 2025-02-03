@@ -1,59 +1,53 @@
-.divtaskbar{
+.taskbar{
+    background-color: rgb(217, 217, 217, 0.3);
+    width: 317px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 27px;
+    height: 600px;
+    margin-top: 50px;
+    border-end-end-radius: 45px;
+    font-family: 'Roboto Mono', monospace;
+    /*font-weight: 400;*/
     overflow-y: auto;
+    cursor: pointer;
 }
 
-.taskbar {
-    background-color: #D9D9D9;
-    padding: 1rem;
-    width: 193px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 421px; 
-    margin-top: 8px;
-    overflow-y: auto;
-    overflow-x: hidden; 
-    border-end-end-radius: 25px;
-    border-top-right-radius: 25px;
-    backdrop-filter: blur(10px);
+.taskbar::-webkit-scrollbar{
+    width: 12px;
 }
 
-.matter{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(-50%);
-    font-family: 'Inter';
-    font-size: 12px;
-    color: inherit;
+.titleFlash{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contenth1{
-    font-family: 'Inter';
-    color: white;
-    font-size: 15px;
-    display: flex;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
     margin-left: 10px;
 }
 
-.titleFlash {
-    font-family: 'Inter';
-    color: 000000;
-    font-size: 24px;
+.matter{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
     display: flex;
+    position: relative;
+    font-weight: 400;
+    margin-left: 180px;
 }
 
 .lateralmenu{
-    background-color: #888888;
-    position: relative;
-    margin-left: -20px;
-    height: 35px;
-    width: 215px;
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-    cursor: pointer;
+    background-color: rgb(217, 217, 217, 0.3);
+    border-top-right-radius: 15px;
+    border-end-end-radius: 15px;
+    width: 285px;
+    border: 1px solid rgba(0, 0, 0);
+    border-style: solid;
 }

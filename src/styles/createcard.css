@@ -38,3 +38,14 @@ display: none;
   width: 450px;
   height: 300px;
 }
+
+.btnModal{
+  width: 251px;
+  height: 41px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 15px;
+}
+
