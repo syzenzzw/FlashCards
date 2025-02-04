@@ -3,7 +3,6 @@ import { useQuery } from 'react-query'
 import '../styles/flashmenu.css'
 import { useState } from "react";
 import '../styles/card.css'
-import polegar from './imgs/polegar.png'
 
 function FlashMenu(){ 
 
@@ -41,8 +40,26 @@ function FlashMenu(){
         const response = await axios.get(`https://localhost:7091/api/v1/PegarPelaId${id}`)
         const dataResponse = await response.data;
         setCards(dataResponse);
-        console.log(dataResponse);           
+        console.log(dataResponse); 
     }
+
+
+    function openModalDelete(){
+        const modalDelete = document.getElementById('modalDelete');
+
+        if (modalDelete) {
+            modalDelete.style.display = 'block';
+        }
+    }
+
+    function closeModalDelete(){
+        const modalDeleteClose = document.getElementById('modalDelete');
+
+        if (modalDeleteClose) {
+            modalDeleteClose.style.display = 'none';
+        }
+    }
+
 
     async function changeRevised(id: number) {
         const responseRevised = await fetch(`https://localhost:7091/api/v1/ChangeRevised${id}`, {
@@ -59,6 +76,23 @@ function FlashMenu(){
             console.log(responseRevised)
             responseGetById(id);
         }
+    }
+
+    async function deleteCard(id: number) {
+        const resposeDelete = await fetch(`https://localhost:7091/api/v1/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(data => {
+            console.log(data);
+            if (data.status == 200) {
+                alert('card deletado com sucesso! ');
+                closeModalDelete()  
+            }
+        })
+        resposeDelete;
     }
 
     
@@ -87,9 +121,9 @@ function FlashMenu(){
         </div>
             {cards && (
                 <div className="containerCard">
-                     <button className="btnDelete">
+                     <button onClick={() => openModalDelete()} className="btnDelete">
                             Delete
-                        </button>
+                    </button>
                        <div className="contentCard">
                             <p className="content">{cards.content}</p>
 
@@ -115,9 +149,19 @@ function FlashMenu(){
                             className="btnReview">
                                 Review
                         </button>
+
+                <div id="modalDelete" className="modalDelete">
+                <div className="contentDelete">
+                <button onClick={() => deleteCard(cards.id)} className="yes">yes</button>
+                <button onClick={() => closeModalDelete()} className="no">no</button>
+                </div>
+                </div>
                 </div>
             )}
-        </div>
+
+             
+
+        </div>   
     );
 }
 

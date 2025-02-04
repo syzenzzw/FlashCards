@@ -13,8 +13,8 @@ function HeaderPage(){
             </h1>
             <div className='links'>
                 <a href="#">About</a>
-                <a href="#">Project</a>
-                <a href="#">API</a>
+                <a href="https://github.com/syzenzzw/FlashCardsTemplate">Project</a>
+                <a href="https://github.com/syzenzzw/FlashCardsSetup">API</a>
             </div>
         </div>
     )

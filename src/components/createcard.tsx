@@ -69,26 +69,26 @@ function CreateCard(){
             <div id='modal' className="modal">
                 <div className="contentModal">
                     <span onClick={closeModal} className="close">&times;</span>
-                    <p>para teste</p>
+                    <p className='titleModal'>Create FlashCard</p>
                     <textarea onChange={(e) => setCardContent(e.target.value)} className='txtArea' id="txtArea" placeholder='...'>
                     </textarea> 
 
                     <br /><br />
 
-                    <label htmlFor="inptMatter">matéria: </label>
+                    <label  className='lblMatter' htmlFor="inptMatter">Matter: </label>
                     <input type="text" 
                     className='inptMatter'
                     onChange={(e) => setCardMatter(e.target.value)}/>
                    
-                    <label htmlFor="slc">Urgência: </label>
+                    <label className='lblUrgency' htmlFor="slc">Urgency: </label>
 
-                    <select onChange={(e) => setCardUrgency(e.target.value)} id="slc">
-                        <option value="Selecione">Selecione a urgência</option>
-                        <option value="Alta">Alta</option>
-                        <option value="Média">Média</option>
-                        <option value="Baixa">Baixa</option>
+                    <select onChange={(e) => setCardUrgency(e.target.value)} className='slc' id="slc">
+                        <option value="Selecione">Select a urgency</option>
+                        <option value="Alta">High</option>
+                        <option value="Média">Mid</option>
+                        <option value="Baixa">Low</option>
                     </select>
-                    <button className='btnCreate' onClick={CreateCardFunc} type='button'>Criar Flash Card</button>
+                    <button className='btnCreate' onClick={CreateCardFunc} type='button'>Create</button>
                 </div>
             </div>
         </div>

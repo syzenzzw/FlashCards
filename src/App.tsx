@@ -9,6 +9,9 @@ function App() {
     <div>
         <HeaderPage />
         <FlashMenu />
+        <br /><br />
+        <br /><br />
+        <br /><br />
         <CreateCard />
     </div>
   )

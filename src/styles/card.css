@@ -38,5 +38,30 @@
     border: none;
     margin-left: 720px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
+@media (max-width: 1000px) {
+    .containerCard{
+        width: 200px;
+        height: 250px;
+        position: relative;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+
+    .btnDelete{
+        width: 50px;
+        height: 15px;
+        position: relative;
+        margin-left: 130px;
+        font-size: 10px;
+    }
+
+    .btnReview{
+        width: 59px;
+        height: 20px;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+}
