@@ -1,80 +1,88 @@
-.modal{
+.modal {
   display: none;
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
-  }
-
-.contentModal{
-      background-color: rgb(217, 217, 217, 0.5);
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 12%;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 824px;
-      height: 449px; 
-      border-radius: 20px;
-      font-family: 'Roboto Mono', monospace;
-      font-weight: 400;
-  }
-
-.close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-.txtArea {
-    width: 495px;
-    height: 349px;
-    border: 1px black;
-    border-style: solid;
-    margin-left: 20px;
-    resize: none;
-  }
-
-.btnModal {
-    position: fixed;  
-    top: 725px;     
-    left: 10px;     
-    width: 251px;
-    height: 41px;
-    border-radius: 20px;
-    background-color: #d9d9d9;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
-    font-size: 15px;
-    display: inline-block;
-    cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
 }
 
-.btnCreate{
+.contentModal {
+  background-color: rgb(217, 217, 217, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 824px;
+  height: 449px;
+  border-radius: 20px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.txtArea {
+  width: 495px;
+  height: 349px;
+  border: 1px black;
+  border-style: solid;
+  margin-left: 20px;
+  resize: none;
+}
+
+.btnModal {
+  position: fixed;
+  top: 725px;
+  left: 10px;
+  width: 251px;
+  height: 41px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btnModal:hover {
+  transform: translateY(4px);
+  transition: 250ms;
+  cursor: pointer;
+  border: none;
+}
+
+.btnCreate {
   color: black;
   font-size: 16px;
   width: 168px;
   height: 33px;
   border-radius: 20px;
   border: 1px black solid;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400;
+  cursor: pointer;
 }
 
-.titleModal{
+.titleModal {
   font-size: 24px;
   color: black;
   position: relative;
@@ -83,26 +91,26 @@
   margin-left: 20px;
 }
 
-.lblMatter{
+.lblMatter {
   font-size: 24px;
   font-weight: 400;
 }
 
-.inptMatter{
+.inptMatter {
   width: 219px;
   height: 27px;
   border-radius: 10px;
   border: 1px black solid;
 }
 
-.lblUrgency{
+.lblUrgency {
   font-size: 24px;
   font-weight: 400;
 }
 
-.slc{
+.slc {
   font-size: 15px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400px;
   border: 1px black solid;
   border-radius: 10px;

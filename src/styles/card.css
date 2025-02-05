@@ -41,6 +41,19 @@
     cursor: pointer;
 }
 
+.btnUpdate{
+    cursor: pointer;
+    color: white;
+    width: 79px;
+    height: 40px;
+    background-color: rgb(44, 44, 44, 1.0);
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+ 
+
 @media (max-width: 1000px) {
     .containerCard{
         width: 200px;
@@ -65,3 +78,79 @@
         margin-top: 20px;
     }
 }
+
+.updateContent{
+    display: none;
+}
+
+.updateContent .txtUpdate{
+    resize: none;
+    background-color: rgb(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    position: relative;
+    top: 30px;
+    margin-left: 20px;
+    width: 522px;
+    height: 333px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}   
+
+.updateContent .confUpdate{
+    background-color: rgb(44, 44, 44, 1.0);
+    color: white;
+    width: 154px;
+    height: 40px;
+    border-radius: 12px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    border: none;
+    top: 70px;
+    left: -520px;
+}
+
+.confUpdate:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+
+.btnDelete:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+
+.btnReview:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+
+.yes:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+.no:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+
+.btnUpdate:hover{
+    transform: translateY(4px);
+    transition: 250ms;
+    cursor: pointer;
+    border: none;
+}
+

@@ -1,76 +1,81 @@
-.taskbar{
-    background-color: rgb(217, 217, 217, 0.3);
-    width: 317px;
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-    height: 600px;
-    margin-top: 50px;
-    border-end-end-radius: 45px;
-    font-family: 'Roboto Mono', monospace;
-    /*font-weight: 400;*/
-    overflow-y: auto;
-    cursor: pointer;
+.taskbar {
+  background-color: rgb(217, 217, 217, 0.3);
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  height: 600px;
+  margin-top: 50px;
+  border-end-end-radius: 45px;
+  font-family: "Roboto Mono", monospace;
+  /*font-weight: 400;*/
+  overflow-y: auto;
 }
 
-.taskbar::-webkit-scrollbar{
-    width: 12px;
+.taskbar::-webkit-scrollbar {
+  width: 12px;
 }
 
-.titleFlash{
-    color: white;
-    font-weight: 400;
-    font-size: 20px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+.titleFlash {
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contenth1{
-    font-weight: 400;
-    font-size: 24px;
-    color: black;
-    margin-left: 10px;
+.contenth1 {
+  font-weight: 400;
+  font-size: 24px;
+  color: black;
+  margin-left: 10px;
 }
 
-.matter{
-    font-size: 16px;
-    font-weight: 400;
-    color: black;
-    display: flex;
-    position: relative;
-    font-weight: 400;
-    margin-left: 180px;
+.matter {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  position: relative;
+  font-weight: 400;
+  margin-left: 180px;
 }
 
-.lateralmenu{
-    background-color: rgb(217, 217, 217, 0.3);
-    border-top-right-radius: 15px;
-    border-end-end-radius: 15px;
-    width: 285px;
-    border: 1px solid rgba(0, 0, 0);
-    border-style: solid;
+.lateralmenu {
+  background-color: rgb(217, 217, 217, 0.3);
+  border-top-right-radius: 15px;
+  border-end-end-radius: 15px;
+  width: 285px;
+  border: 1px solid rgba(0, 0, 0);
+  border-style: solid;
+  cursor: pointer;
 }
 
-.modalDelete{
-    display: none;
-      position: fixed;
-      z-index: 1; 
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0,0,0); 
-      background-color: rgba(0,0,0,0.4); 
-    }
-  
-    .contentDelete{
-        background-color: #fefefe;
-        margin: 15% auto; 
-        padding: 20px;
-        border: 1px solid #888;
-        width: 550px;
-        height: 350px; 
-    }
-  
+.lateralmenu:hover {
+  transform: translateY(4px);
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.modalDelete {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contentDelete {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 550px;
+  height: 350px;
+}
