@@ -60,10 +60,7 @@
 }
 
 @media (max-width: 768px) {
-    .header { 
-        /* Alinha os itens em uma coluna em telas menores */
-        /* Centraliza o conteúdo */
-    }
+    
 
     .logoFM {
         width: 90px;  /* Ajusta o tamanho do logo para telas menores */

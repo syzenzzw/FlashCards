@@ -27,8 +27,11 @@ function FlashMenu() {
         )
         .then((response) => response.data);
     },
-    {}
+    {
+    }
   );
+
+  console.log(data);
 
   if (error) {
     return <div className="erro">erro</div>;
@@ -108,16 +111,12 @@ function FlashMenu() {
 
     const idContent =  document.getElementById('updateContent');
     const contentCardId = document.getElementById('contentCard');
-    const btnReview = document.getElementById('btnReview');
-    const btnDelete = document.getElementById('btnDelete');
-    const btnUpdate = document.getElementById('btnUpdate');
+    const btns = document.getElementById('buttons')
 
-    if (idContent && contentCardId && btnDelete  && btnReview && btnUpdate) {
+    if (idContent && contentCardId && btns) {
         idContent.style.display = 'block';
         contentCardId.style.display = 'none';
-        btnReview.style.display = 'none';
-        btnDelete.style.display = 'none';
-        btnUpdate.style.display = 'none';
+        btns.style.display = 'none'
     }
 
   }
@@ -140,19 +139,21 @@ function FlashMenu() {
 
     const idContent =  document.getElementById('updateContent');
     const contentCardId = document.getElementById('contentCard');
+    const btns = document.getElementById('buttons')
 
-    if (idContent && contentCardId) {
+    if (idContent && contentCardId && btns) {
         idContent.style.display = 'none';
         contentCardId.style.display = 'block'
+        btns.style.display = 'block'; 
     }
 
     const dataUpdate = await reponseUpdate.json();
     await setUpdateResponse(dataUpdate.response);
-    await console.log(dataUpdate.response)
+    await console.log(updateReponse)
 
     } catch (e) {
       console.log("erro: ", e);
-    }
+    }      
   }
 
   return (
@@ -166,7 +167,7 @@ function FlashMenu() {
 
       <div className="taskbar">
         <h1 className="titleFlash">My FlashCards: </h1>
-        {data?.cards.map((card: Card) => (
+        {data?.map((card: Card) => (
           <div
             onClick={() => responseGetById(card.id)}
             className="lateralmenu"
@@ -185,26 +186,31 @@ function FlashMenu() {
         ))}
       </div>
       {cards && (
-        <div className="containerCard">
+        <div id="conteinerCard" className="containerCard">
           <button id="btnDelete" onClick={() => openModalDelete()} className="btnDelete">
             Delete
           </button>
           <div id="contentCard" className="contentCard">
+            
             <p className="content">{cards.content}</p>
 
             <br />
             <br />
+          <div className="cardInfo">
 
+          
             <small className="createdOnCard">
               Created At: {cards.createdOn}
             </small>
 
-            <br />
-            <br />
+           <br />
 
             <small className="urgency">Urgency: {cards.urgency}</small>
 
             <br />
+
+            <small className="mattercard">Matter: {cards.matter}</small>
+
             <br />
 
             <small
@@ -215,8 +221,11 @@ function FlashMenu() {
             >
               Revised: {cards.revised}
             </small>
+            </div>
           </div>
+            <div className="buttons" id="buttons">
 
+            
           <button id="btnReview" onClick={() => changeRevised(cards.id)} className="btnReview">
             Review
           </button>
@@ -238,6 +247,8 @@ function FlashMenu() {
           >
             Update
           </button>
+
+          </div>
 
           <div id="updateContent" className="updateContent">
             <textarea

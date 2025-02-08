@@ -80,6 +80,9 @@
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   cursor: pointer;
+  position: relative;
+  margin-left: 550px;
+  top: -90px;
 }
 
 .titleModal {
